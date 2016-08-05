@@ -5,7 +5,7 @@ cd "$(dirname "$0")"
 
 if [ ! -e target/.done ]; then
     mkdir -p target
-    docker run -it -v "$(pwd)/target:/output" rancher/s6-builder:v0.1.0 /opt/build.sh
+    docker run -it  rancher/s6-builder:v0.1.0 /opt/build.sh
     touch target/.done
 fi
 
