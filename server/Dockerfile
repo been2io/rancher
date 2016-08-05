@@ -43,7 +43,7 @@ ENV DEFAULT_CATTLE_CATALOG_URL="library=https://github.com/rancher/rancher-catal
 
 EXPOSE 3306
 ENV CATTLE_CATTLE_VERSION v0.167.5
-ADD https://github.com/lifecontrol/rancher.git /usr/share/cattle/
+ADD https://github.com/lifecontrol/cattle/releases/download/v0.167.5.1/cattle.jar /usr/share/cattle/
 
 RUN cd / && for i in $(ls /s6-statics/*static.tar.gz);do tar -zxvf $i;done && rm -rf /s6-statics/*static.tar.gz && \
     mkdir -p $CATTLE_HOME && \
