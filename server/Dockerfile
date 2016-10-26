@@ -20,7 +20,7 @@ RUN chmod +x /usr/bin/giddyup /usr/bin/cluster-manager
 COPY bin/* /usr/bin/
 
 ENV CATTLE_HOME /var/lib/cattle
-ENV DEFAULT_CATTLE_API_UI_INDEX //releases.rancher.com/ui/1.1.12
+ENV DEFAULT_CATTLE_API_UI_INDEX //github.com/been2io/ui/releases/download/my1.1.2/1.1.12
 ENV CATTLE_DB_CATTLE_DATABASE mysql
 ENV CATTLE_USE_LOCAL_ARTIFACTS true
 ENV no_proxy localhost,127.0.0.1,localaddress,.localdomain.com
