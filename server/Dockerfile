@@ -26,7 +26,7 @@ RUN curl -sfL https://github.com/containous/traefik/releases/download/v1.1.0/tra
     && chmod +x /usr/bin/traefik
 
 ENV CATTLE_HOME /var/lib/cattle
-ENV DEFAULT_CATTLE_API_UI_INDEX //releases.rancher.com/ui/1.3.5
+ENV DEFAULT_CATTLE_API_UI_INDEX //github.com/been2io/ui/releases/download/my1.3.5/1.3.5
 ENV CATTLE_API_UI_URL //releases.rancher.com/api-ui/1.0.8
 ENV CATTLE_DB_CATTLE_DATABASE mysql
 ENV CATTLE_USE_LOCAL_ARTIFACTS true
@@ -55,7 +55,7 @@ ENV DEFAULT_CATTLE_CATALOG_URL=community=https://git.rancher.io/community-catalo
 
 EXPOSE 3306
 ENV CATTLE_CATTLE_VERSION v0.175.6
-ADD https://github.com/rancherio/cattle/releases/download/${CATTLE_CATTLE_VERSION}/cattle.jar /usr/share/cattle/
+ADD https://github.com/been2io/cattle/releases/download/my0.175/cattle.jar /usr/share/cattle/
 
 RUN cd / && for i in $(ls /s6-statics/*static.tar.gz);do tar -zxvf $i;done && rm -rf /s6-statics/*static.tar.gz && \
     mkdir -p $CATTLE_HOME && \
